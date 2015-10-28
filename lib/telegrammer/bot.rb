@@ -486,6 +486,8 @@ module Telegrammer
       end
 
       begin
+        puts "validated params:"
+        puts validated_params
         response = @connection.post(
           "#{API_ENDPOINT}/#{api_uri}",
           validated_params,
