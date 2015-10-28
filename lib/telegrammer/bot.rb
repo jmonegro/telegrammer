@@ -445,7 +445,7 @@ module Telegrammer
         file_id: { required: true, class: [String] }
       }
 
-      response = response = api_request("getFile", params, params_validation)
+      response = response = api_request("getFile", params)
       file_object = Telegrammer::DataTypes::File.new(response.result)
 
       "https://api.telegram.org/file/bot#{@api_token}/#{file_object.file_path}"
